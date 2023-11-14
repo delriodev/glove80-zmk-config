@@ -4,50 +4,50 @@ fr_mark: fr_mark {
     compatible = "zmk,behavior-mod-morph";
     label = "fr_MARK";
     #binding-cells = <0>;
-    bindings = <&kp FR_QUESTION>, <&kp FR_EXCLAMATION>;
+    bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
     mods = <(MOD_LSFT)>;
 };
 
 // key lshift rshift alt
-//  '     ^      "    `
-fr_apos_one: fr_apos_one {
-    compatible = "zmk,behavior-mod-morph";
-    label = "fr_APOS_one";
-    #binding-cells = <0>;
-    bindings = <&kp FR_SINGLE_QUOTE>, <&kp FR_CARET>;
-    mods = <(MOD_LSFT)>;
-};
-fr_apos_two: fr_apos_two {
-    compatible = "zmk,behavior-mod-morph";
-    label = "fr_APOS_two";
-    #binding-cells = <0>;
-    bindings = <&fr_apos_one>, <&kp FR_DOUBLE_QUOTES>;
-    mods = <(MOD_RSFT)>;
-};
-fr_apos: apos {
-    compatible = "zmk,behavior-mod-morph";
-    label = "fr_APOS";
-    #binding-cells = <0>;
-    bindings = <&apos_two>, <&kp FR_GRAVE>;
-    mods = <(MOD_LALT)>;
-};
+// //  '     ^      "    `
+// fr_apos_one: fr_apos_one {
+//     compatible = "zmk,behavior-mod-morph";
+//     label = "fr_APOS_one";
+//     #binding-cells = <0>;
+//     bindings = <&kp FR_SINGLE_QUOTE>, <&kp FR_CARET>;
+//     mods = <(MOD_LSFT)>;
+// };
+// fr_apos_two: fr_apos_two {
+//     compatible = "zmk,behavior-mod-morph";
+//     label = "fr_APOS_two";
+//     #binding-cells = <0>;
+//     bindings = <&fr_apos_one>, <&kp FR_DOUBLE_QUOTES>;
+//     mods = <(MOD_RSFT)>;
+// };
+// fr_apos: apos {
+//     compatible = "zmk,behavior-mod-morph";
+//     label = "fr_APOS";
+//     #binding-cells = <0>;
+//     bindings = <&apos_two>, <&kp FR_GRAVE>;
+//     mods = <(MOD_LALT)>;
+// };
 
-// key lshift rshift alt
-//  ,     ;          
-fr_comma: fr_comma {
-    compatible = "zmk,behavior-mod-morph";
-    label = "fr_COMMA";
-    #binding-cells = <0>;
-    bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
-    mods = <(MOD_LSFT)>;
-};
+// // key lshift rshift alt
+// //  ,     ;          
+// fr_comma: fr_comma {
+//     compatible = "zmk,behavior-mod-morph";
+//     label = "fr_COMMA";
+//     #binding-cells = <0>;
+//     bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+//     mods = <(MOD_LSFT)>;
+// };
 
-// key lshift rshift alt
-//  .     :          
-fr_dot: fr_dot {
-    compatible = "zmk,behavior-mod-morph";
-    label = "fr_dot";
-    #binding-cells = <0>;
-    bindings = <&kp FR_DOT>, <&kp FR_COLON>;
-    mods = <(MOD_LSFT)>;
-};
+// // key lshift rshift alt
+// //  .     :          
+// fr_dot: fr_dot {
+//     compatible = "zmk,behavior-mod-morph";
+//     label = "fr_dot";
+//     #binding-cells = <0>;
+//     bindings = <&kp FR_DOT>, <&kp FR_COLON>;
+//     mods = <(MOD_LSFT)>;
+// };
