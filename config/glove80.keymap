@@ -23,7 +23,7 @@
 
 / {
     behaviors {
-        #include "behaviors.dtsi";
+        #include "en_behaviors.dtsi"
     };
 
     macros {
