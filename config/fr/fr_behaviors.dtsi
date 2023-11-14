@@ -32,15 +32,15 @@ fr_apos: fr_apos {
     mods = <(MOD_LALT)>;
 };
 
-// // key lshift rshift alt
-// //  ,     ;          
-// fr_comma: fr_comma {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "fr_COMMA";
-//     #binding-cells = <0>;
-//     bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
-//     mods = <(MOD_LSFT)>;
-// };
+// key lshift rshift alt
+//  ,     ;          
+fr_comma: fr_comma {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_COMMA";
+    #binding-cells = <0>;
+    bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+    mods = <(MOD_LSFT)>;
+};
 
 // // key lshift rshift alt
 // //  .     :          
