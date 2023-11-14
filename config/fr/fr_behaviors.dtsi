@@ -8,29 +8,29 @@ fr_mark: fr_mark {
     mods = <(MOD_LSFT)>;
 };
 
-// // key lshift rshift alt
-// //  '     ^      "    `
-// fr_apos_one: fr_apos_one {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "fr_APOS_one";
-//     #binding-cells = <0>;
-//     bindings = <&kp FR_SINGLE_QUOTE>, <&kp FR_CARET>;
-//     mods = <(MOD_LSFT)>;
-// };
-// fr_apos_two: fr_apos_two {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "fr_APOS_two";
-//     #binding-cells = <0>;
-//     bindings = <&fr_apos_one>, <&kp FR_DOUBLE_QUOTES>;
-//     mods = <(MOD_RSFT)>;
-// };
-// fr_apos: apos {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "fr_APOS";
-//     #binding-cells = <0>;
-//     bindings = <&apos_two>, <&kp FR_GRAVE>;
-//     mods = <(MOD_LALT)>;
-// };
+// key lshift rshift alt
+//  '     ^      "    `
+fr_apos_one: fr_apos_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_APOS_one";
+    #binding-cells = <0>;
+    bindings = <&kp FR_SINGLE_QUOTE>, <&kp FR_CARET>;
+    mods = <(MOD_LSFT)>;
+};
+fr_apos_two: fr_apos_two {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_APOS_two";
+    #binding-cells = <0>;
+    bindings = <&fr_apos_one>, <&kp FR_DOUBLE_QUOTES>;
+    mods = <(MOD_RSFT)>;
+};
+fr_apos: fr_apos {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_APOS";
+    #binding-cells = <0>;
+    bindings = <&apos_two>, <&kp FR_GRAVE>;
+    mods = <(MOD_LALT)>;
+};
 
 // // key lshift rshift alt
 // //  ,     ;          
