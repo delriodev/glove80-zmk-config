@@ -172,50 +172,50 @@ math: math {
     mods = <(MOD_RSFT)>;
 };
 
-// comma: comma {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "COMMA";
-//     #binding-cells = <0>;
-//     bindings = <&kp COMMA>, <&kp SEMICOLON>;
-//     mods = <(MOD_LSFT)>;
-// };
+comma: comma {
+    compatible = "zmk,behavior-mod-morph";
+    label = "COMMA";
+    #binding-cells = <0>;
+    bindings = <&kp COMMA>, <&kp SEMICOLON>;
+    mods = <(MOD_LSFT)>;
+};
     
-// dot: dot {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "dot";
-//     #binding-cells = <0>;
-//     bindings = <&kp DOT>, <&kp COLON>;
-//     mods = <(MOD_LSFT)>;
-// };
+dot: dot {
+    compatible = "zmk,behavior-mod-morph";
+    label = "dot";
+    #binding-cells = <0>;
+    bindings = <&kp DOT>, <&kp COLON>;
+    mods = <(MOD_LSFT)>;
+};
 
-// left: left {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "LEFT";
-//     #binding-cells = <0>;
-//     bindings = <&kp LEFT>, <&kp HOME>;
-//     mods = <(MOD_LALT)>;
-// };
+left: left {
+    compatible = "zmk,behavior-mod-morph";
+    label = "LEFT";
+    #binding-cells = <0>;
+    bindings = <&kp LEFT>, <&kp HOME>;
+    mods = <(MOD_LALT)>;
+};
     
-// right: right {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "RIGHT";
-//     #binding-cells = <0>;
-//     bindings = <&kp RIGHT>, <&kp END>;
-//     mods = <(MOD_LALT)>;
-// };
+right: right {
+    compatible = "zmk,behavior-mod-morph";
+    label = "RIGHT";
+    #binding-cells = <0>;
+    bindings = <&kp RIGHT>, <&kp END>;
+    mods = <(MOD_LALT)>;
+};
     
-// up: up {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "UP";
-//     #binding-cells = <0>;
-//     bindings = <&kp UP>, <&kp PG_UP>;
-//     mods = <(MOD_LALT)>;
-// };
+up: up {
+    compatible = "zmk,behavior-mod-morph";
+    label = "UP";
+    #binding-cells = <0>;
+    bindings = <&kp UP>, <&kp PG_UP>;
+    mods = <(MOD_LALT)>;
+};
     
-// down: down {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "DOWN";
-//     #binding-cells = <0>;
-//     bindings = <&kp DOWN>, <&kp PG_DN>;
-//     mods = <(MOD_LALT)>;
-// };  
+down: down {
+    compatible = "zmk,behavior-mod-morph";
+    label = "DOWN";
+    #binding-cells = <0>;
+    bindings = <&kp DOWN>, <&kp PG_DN>;
+    mods = <(MOD_LALT)>;
+};  
