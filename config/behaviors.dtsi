@@ -15,29 +15,29 @@ magic: magic_hold_tap {
     bindings = <&mo>, <&rgb_ug_status_macro>;
 };
 
-// // key lshift rshift alt
-// //  (     {     [     <
-// open_one: open_one {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "OPEN_ONE";
-//     #binding-cells = <0>;
-//     bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
-//     mods = <(MOD_LSFT)>;
-// };
-// open_two: open_two {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "OPEN_TWO";
-//     #binding-cells = <0>;
-//     bindings = <&open_one>, <&kp LEFT_BRACKET>;
-//     mods = <(MOD_RSFT)>;
-// };
-// open: open {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "OPEN";
-//     #binding-cells = <0>;
-//     bindings = <&open_two>, <&kp LESS_THAN>;
-//     mods = <(MOD_LALT)>;
-// };
+// key lshift rshift alt
+//  (     {     [     <
+open_one: open_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "OPEN_ONE";
+    #binding-cells = <0>;
+    bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+    mods = <(MOD_LSFT)>;
+};
+open_two: open_two {
+    compatible = "zmk,behavior-mod-morph";
+    label = "OPEN_TWO";
+    #binding-cells = <0>;
+    bindings = <&open_one>, <&kp LEFT_BRACKET>;
+    mods = <(MOD_RSFT)>;
+};
+open: open {
+    compatible = "zmk,behavior-mod-morph";
+    label = "OPEN";
+    #binding-cells = <0>;
+    bindings = <&open_two>, <&kp LESS_THAN>;
+    mods = <(MOD_LALT)>;
+};
 
 // // key lshift rshift alt
 // //  )     }     ]     >
