@@ -42,12 +42,12 @@ fr_comma: fr_comma {
     mods = <(MOD_LSFT)>;
 };
 
-// // key lshift rshift alt
-// //  .     :          
-// fr_dot: fr_dot {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "fr_dot";
-//     #binding-cells = <0>;
-//     bindings = <&kp FR_DOT>, <&kp FR_COLON>;
-//     mods = <(MOD_LSFT)>;
-// };
+// key lshift rshift alt
+//  .     :          
+fr_dot: fr_dot {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_dot";
+    #binding-cells = <0>;
+    bindings = <&kp FR_DOT>, <&kp FR_COLON>;
+    mods = <(MOD_LSFT)>;
+};
