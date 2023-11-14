@@ -97,29 +97,29 @@ dash: dash {
     mods = <(MOD_RSFT)>;
 };
 
-// // key lshift rshift alt
-// //  "     '     `     ^
-// apos_one: apos_one {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "APOS_one";
-//     #binding-cells = <0>;
-//     bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
-//     mods = <(MOD_LSFT)>;
-// };
-// apos_two: apos_two {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "APOS_two";
-//     #binding-cells = <0>;
-//     bindings = <&apos_one>, <&GRAVE>;
-//     mods = <(MOD_RSFT)>;
-// };
-// apos: apos {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "APOS";
-//     #binding-cells = <0>;
-//     bindings = <&apos_two>, <&kp CARET>;
-//     mods = <(MOD_LALT)>;
-// };
+// key lshift rshift alt
+//  "     '     `     ^
+apos_one: apos_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "APOS_one";
+    #binding-cells = <0>;
+    bindings = <&kp DOUBLE_QUOTES>, <&kp APOSTROPHE>;
+    mods = <(MOD_LSFT)>;
+};
+apos_two: apos_two {
+    compatible = "zmk,behavior-mod-morph";
+    label = "APOS_two";
+    #binding-cells = <0>;
+    bindings = <&apos_one>, <&kp GRAVE>;
+    mods = <(MOD_RSFT)>;
+};
+apos: apos {
+    compatible = "zmk,behavior-mod-morph";
+    label = "APOS";
+    #binding-cells = <0>;
+    bindings = <&apos_two>, <&kp CARET>;
+    mods = <(MOD_LALT)>;
+};
 
 // key lshift rshift alt
 //  /     \     |     
