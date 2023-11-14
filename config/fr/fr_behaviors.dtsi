@@ -1,8 +1,8 @@
 // key lshift rshift alt
 //  ?     !          
-frmark: frmark {
+fr_mark: fr_mark {
     compatible = "zmk,behavior-mod-morph";
-    label = "frMARK";
+    label = "fr_MARK";
     #binding-cells = <0>;
     bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
     mods = <(MOD_LSFT)>;
