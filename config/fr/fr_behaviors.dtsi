@@ -1,12 +1,12 @@
-// // key lshift rshift alt
-// //  ?     !          
-// fr_mark: fr_mark {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "fr_MARK";
-//     #binding-cells = <0>;
-//     bindings = <&kp FR_QUESTION>, <&kp FR_EXCLAMATION>;
-//     mods = <(MOD_LSFT)>;
-// };
+// key lshift rshift alt
+//  ?     !          
+frmark: frmark {
+    compatible = "zmk,behavior-mod-morph";
+    label = "frMARK";
+    #binding-cells = <0>;
+    bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+    mods = <(MOD_LSFT)>;
+};
 
 // // key lshift rshift alt
 // //  '     ^      "    `
