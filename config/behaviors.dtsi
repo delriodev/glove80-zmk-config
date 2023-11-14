@@ -155,22 +155,22 @@ at: at {
     mods = <(MOD_RSFT)>;
 };
 
-// // key lshift rshift alt
-// //  *     +     %      
-// math_one: math_one {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "MATH_one";
-//     #binding-cells = <0>;
-//     bindings = <&kp ASTERISK>, <&kp PLUS>;
-//     mods = <(MOD_LSFT)>;
-// };
-// math: math {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "MATH";
-//     #binding-cells = <0>;
-//     bindings = <&math_one>, <&kp PERCENT>;
-//     mods = <(MOD_RSFT)>;
-// };
+// key lshift rshift alt
+//  *     +     %      
+math_one: math_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "MATH_one";
+    #binding-cells = <0>;
+    bindings = <&kp ASTERISK>, <&kp PLUS>;
+    mods = <(MOD_LSFT)>;
+};
+math: math {
+    compatible = "zmk,behavior-mod-morph";
+    label = "MATH";
+    #binding-cells = <0>;
+    bindings = <&math_one>, <&kp PERCENT>;
+    mods = <(MOD_RSFT)>;
+};
 
 // comma: comma {
 //     compatible = "zmk,behavior-mod-morph";
