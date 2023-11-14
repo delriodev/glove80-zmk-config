@@ -1,16 +1,64 @@
-        layer_td: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_TAP_DANCE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo LOWER>, <&to LOWER>;
-        };
+layer_td: tap_dance_0 {
+    compatible = "zmk,behavior-tap-dance";
+    label = "LAYER_TAP_DANCE";
+    #binding-cells = <0>;
+    tapping-term-ms = <200>;
+    bindings = <&mo LOWER>, <&to LOWER>;
+};
 
-        magic: magic_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&rgb_ug_status_macro>;
-        };
+magic: magic_hold_tap {
+    compatible = "zmk,behavior-hold-tap";
+    label = "MAGIC_HOLD_TAP";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    bindings = <&mo>, <&rgb_ug_status_macro>;
+};
+
+// key lshift rshift alt
+//  (     {     [     <
+open_one: open_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "OPEN_ONE";
+    #binding-cells = <0>;
+    bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+    mods = <(MOD_LSFT)>;
+};
+open_two: open_two {
+    compatible = "zmk,behavior-mod-morph";
+    label = "OPEN_TWO";
+    #binding-cells = <0>;
+    bindings = <&open_one>, <&kp LEFT_BRACKET>;
+    mods = <(MOD_RSFT)>;
+};
+open: open {
+    compatible = "zmk,behavior-mod-morph";
+    label = "OPEN";
+    #binding-cells = <0>;
+    bindings = <&open_two>, <&kp LESS_THAN>;
+    mods = <(MOD_LALT)>;
+};
+
+// key lshift rshift alt
+//  )     }     ]     >
+close_one: close_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "CLOSE_ONE";
+    #binding-cells = <0>;
+    bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
+    mods = <(MOD_LSFT)>;
+};
+close_two: close_two {
+    compatible = "zmk,behavior-mod-morph";
+    label = "CLOSE_ONE";
+    #binding-cells = <0>;
+    bindings = <&close_one>, <&kp RIGHT_BRACKET>;
+    mods = <(MOD_RSFT)>;
+};
+close: close {
+    compatible = "zmk,behavior-mod-morph";
+    label = "CLOSE";
+    #binding-cells = <0>;
+    bindings = <&close_two>, <&kp GREATER_THAN>;
+    mods = <(MOD_LALT)>;
+};
