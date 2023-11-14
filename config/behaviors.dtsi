@@ -39,29 +39,29 @@ open: open {
     mods = <(MOD_LALT)>;
 };
 
-// // key lshift rshift alt
-// //  )     }     ]     >
-// close_one: close_one {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "CLOSE_ONE";
-//     #binding-cells = <0>;
-//     bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
-//     mods = <(MOD_LSFT)>;
-// };
-// close_two: close_two {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "CLOSE_ONE";
-//     #binding-cells = <0>;
-//     bindings = <&close_one>, <&kp RIGHT_BRACKET>;
-//     mods = <(MOD_RSFT)>;
-// };
-// close: close {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "CLOSE";
-//     #binding-cells = <0>;
-//     bindings = <&close_two>, <&kp GREATER_THAN>;
-//     mods = <(MOD_LALT)>;
-// };
+// key lshift rshift alt
+//  )     }     ]     >
+close_one: close_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "CLOSE_ONE";
+    #binding-cells = <0>;
+    bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
+    mods = <(MOD_LSFT)>;
+};
+close_two: close_two {
+    compatible = "zmk,behavior-mod-morph";
+    label = "CLOSE_ONE";
+    #binding-cells = <0>;
+    bindings = <&close_one>, <&kp RIGHT_BRACKET>;
+    mods = <(MOD_RSFT)>;
+};
+close: close {
+    compatible = "zmk,behavior-mod-morph";
+    label = "CLOSE";
+    #binding-cells = <0>;
+    bindings = <&close_two>, <&kp GREATER_THAN>;
+    mods = <(MOD_LALT)>;
+};
 
 // // key lshift rshift alt
 // //  ?     !     &     
