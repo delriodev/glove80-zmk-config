@@ -16,13 +16,27 @@
 // layers
 #define DEFAULT 0
 #define LOWER 1
-#define UPPER 2
-#define MAGIC 3
-#define FACTORY_TEST 4
+#define MAGIC 2
+#define FACTORY_TEST 3
 
 / {
     behaviors {
-        #include "behaviors.dtsi"
+        layer_td: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo LOWER>, <&to LOWER>;
+        };
+
+        magic: magic_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&rgb_ug_status_macro>;
+        };
     };
 
     macros {

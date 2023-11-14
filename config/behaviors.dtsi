@@ -1,27 +1,16 @@
-lower: tap_dance_0 {
-    compatible = "zmk,behavior-tap-dance";
-    label = "LAYER_TAP_DANCE";
-    #binding-cells = <0>;
-    tapping-term-ms = <200>;
-    bindings = <&mo LOWER>, <&to LOWER>;
-};
+        layer_td: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo LOWER>, <&to LOWER>;
+        };
 
-// hold or toggle layer 2
-upper: tap_dance_1 {
-    compatible = "zmk,behavior-tap-dance";
-    label = "UPPER_LAYER_TAP_DANCE";
-    #binding-cells = <0>;
-    tapping-term-ms = <200>;
-    bindings = <&mo UPPER>, <&to UPPER>;
-};
-
-magic: magic_hold_tap {
-    compatible = "zmk,behavior-hold-tap";
-    label = "MAGIC_HOLD_TAP";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    bindings = <&mo>, <&rgb_ug_status_macro>;
-};
-
-
+        magic: magic_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&rgb_ug_status_macro>;
+        };
