@@ -121,22 +121,22 @@ apos: apos {
     mods = <(MOD_LALT)>;
 };
 
-// // key lshift rshift alt
-// //  /     \     |     
-// slash_one: slash_one {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "SLASH_one";
-//     #binding-cells = <0>;
-//     bindings = <&kp SLASH>, <&kp BACKSLASH>;
-//     mods = <(MOD_LSFT)>;
-// };
-// slash: slash {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "SLASH";
-//     #binding-cells = <0>;
-//     bindings = <&slash_one>, <&kp PIPE>;
-//     mods = <(MOD_RSFT)>;
-// };
+// key lshift rshift alt
+//  /     \     |     
+slash_one: slash_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "SLASH_one";
+    #binding-cells = <0>;
+    bindings = <&kp SLASH>, <&kp BACKSLASH>;
+    mods = <(MOD_LSFT)>;
+};
+slash: slash {
+    compatible = "zmk,behavior-mod-morph";
+    label = "SLASH";
+    #binding-cells = <0>;
+    bindings = <&slash_one>, <&kp PIPE>;
+    mods = <(MOD_RSFT)>;
+};
 
 // // key lshift rshift alt
 // //  @     #     $      
