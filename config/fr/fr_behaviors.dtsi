@@ -4,7 +4,7 @@ fr_mark: fr_mark {
     compatible = "zmk,behavior-mod-morph";
     label = "fr_MARK";
     #binding-cells = <0>;
-    bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+    bindings = <&kp FR_QUESTION>, <&kp FR_EXCLAMATION>;
     mods = <(MOD_LSFT)>;
 };
 
