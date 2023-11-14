@@ -138,22 +138,22 @@ slash: slash {
     mods = <(MOD_RSFT)>;
 };
 
-// // key lshift rshift alt
-// //  @     #     $      
-// at_one: at_one {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "AT_one";
-//     #binding-cells = <0>;
-//     bindings = <&kp AT_SIGN>, <&kp HASH>;
-//     mods = <(MOD_LSFT)>;
-// };
-// at: at {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "AT";
-//     #binding-cells = <0>;
-//     bindings = <&at_one>, <&kp DOLLAR>;
-//     mods = <(MOD_RSFT)>;
-// };
+// key lshift rshift alt
+//  @     #     $      
+at_one: at_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "AT_one";
+    #binding-cells = <0>;
+    bindings = <&kp AT_SIGN>, <&kp HASH>;
+    mods = <(MOD_LSFT)>;
+};
+at: at {
+    compatible = "zmk,behavior-mod-morph";
+    label = "AT";
+    #binding-cells = <0>;
+    bindings = <&at_one>, <&kp DOLLAR>;
+    mods = <(MOD_RSFT)>;
+};
 
 // // key lshift rshift alt
 // //  *     +     %      
