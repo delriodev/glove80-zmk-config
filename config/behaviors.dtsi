@@ -80,22 +80,22 @@ mark: mark {
     mods = <(MOD_RSFT)>;
 };
 
-// // key lshift rshift alt
-// //  =     _     -     
-// dash_one: dash_one {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "DASH_one";
-//     #binding-cells = <0>;
-//     bindings = <&kp EQUAL>, <&kp UNDERSCORE>;
-//     mods = <(MOD_LSFT)>;
-// };
-// dash: dash {
-//     compatible = "zmk,behavior-mod-morph";
-//     label = "dash";
-//     #binding-cells = <0>;
-//     bindings = <&dash_one>, <&kp MINUS>;
-//     mods = <(MOD_RSFT)>;
-// };
+// key lshift rshift alt
+//  =     _     -     
+dash_one: dash_one {
+    compatible = "zmk,behavior-mod-morph";
+    label = "DASH_one";
+    #binding-cells = <0>;
+    bindings = <&kp EQUAL>, <&kp UNDERSCORE>;
+    mods = <(MOD_LSFT)>;
+};
+dash: dash {
+    compatible = "zmk,behavior-mod-morph";
+    label = "dash";
+    #binding-cells = <0>;
+    bindings = <&dash_one>, <&kp MINUS>;
+    mods = <(MOD_RSFT)>;
+};
 
 // // key lshift rshift alt
 // //  "     '     `     ^
