@@ -58,7 +58,7 @@ close_one: close_one {
 };  
 close_two: close_two {
     compatible = "zmk,behavior-mod-morph";
-    label = "CLOSE_ONE";
+    label = "CLOSE_TWO";
     #binding-cells = <0>;
     bindings = <&close_one>, <&kp RIGHT_BRACKET>;
     mods = <(MOD_RSFT)>;
