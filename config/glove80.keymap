@@ -18,8 +18,8 @@
 #define DEFAULT 0
 #define LOWER 1
 #define UPPER 2
-#define FRENCH 3
-#define MAGIC 4
+#define MAGIC 3
+#define FRENCH 4
 #define FACTORY_TEST 5
 
 / {
@@ -35,67 +35,70 @@
     keymap {
         compatible = "zmk,keymap";
 
+    default_layer {
     // ---------------------------------------------------------------------------------------------------------------------------------
     // | MAGIC | CAPS | FRENCH |      |       |                                                               |       |       |      |       |      |
     // |       |      |        |      |       |      |                                                 |      |       |       |      |       |      |
     // |  TAB  |  Q   |    G   |  M   |  L    |  W   |                                                 |  B   |   Y   |   U   |  V   |  at   |      |
     // | UPPER |  D   |    S   |  T   |  N    |  R   |                                                 |  I   |   A   |   E   |  O   |   H   |      |
-    // | LOWER |  Z   |    X   |  C   |  F    |  J   | ESC   | LCTRL |       | | slash | apos  | dash  |  K   |   P   | comma | dot  |   *   |      |
+    // | LOWER |  Z   |    X   |  C   |  F    |  J   | ESC   | LCTRL |       | | slash | apos  | dash  |  K   |   P   | comma | dot  |   ~   |      |
     // |       | left |  down  |  up  | right |        SPACE | BKSPC | RET   | | mark  | open  | close        |       | NONE  |      |       |      |
-    default_layer {
-    bindings = <
-        &magic MAGIC 0 &kp CAPS  &to FRENCH &none    &none                                                                                                         &none    &none     &none    &none    &none
-        &none          &none     &none      &none    &none     &none                                                                                      &none    &none    &none     &none    &none    &none
-        &kp TAB        &kp Q     &kp G      &kp M    &kp L     &kp W                                                                                      &kp B    &kp Y    &kp U     &kp V    &at      &none
-        &upper         &kp D     &kp S      &kp T    &kp N     &kp R                                                                                      &kp I    &kp A    &kp E     &kp O    &kp H    &none
-        &lower         &kp Z     &kp X      &kp C    &kp F     &kp J  &mt LCTRL ESC   &mt LGUI DEL        &none          &slash    &apos   &dash          &kp K    &kp P    &comma    &dot     &math    &none
-        &none          &left     &down      &up      &right           &mt LSHFT SPACE &mt RSHFT BACKSPACE &mt LALT RET   &mark     &open   &close                  &none    &none     &none    &none    &none
-    >;
-    };
 
-    layer_Lower {
-    bindings = <
-        &trans &none &none &none &none                                                                &none    &none    &none    &none  &none       
-        &none  &none &none &none &none &none                                                   &none  &none    &none    &none    &none  &none       
-        &none  &kp F7 &kp F8 &kp F9 &none &none                                                &none  &kp N7   &kp N8   &kp N9   &none  &none      
-        &none  &kp F4 &kp F5 &kp F6 &none &none                                                &none  &kp N4   &kp N5   &kp N6   &none  &none      
-        &to 0  &kp F1 &kp F2 &kp F3 &none &none &trans &trans &trans   &none  &none  &none     &none  &kp N1   &kp N2   &kp N3   &none  &none      
-        &none  &none &none &none &none          &trans &trans &trans   &none  &none  &none            &none    &kp N0   &none    &none  &none         
-    >;
-    };
+     base_layer {
+            bindings = <
+     &magic 2 0 &kp CAPS  &to FRENCH &none    &none                                                                                                         &none    &none     &none    &none    &none
+     &none      &none     &none      &none    &none     &none                                                                                      &none    &none    &none     &none    &none    &none
+     &kp TAB    &kp Q     &kp G      &kp M    &kp L     &kp W                                                                                      &kp B    &kp Y    &kp U     &kp V    &at      &none
+     &upper     &kp D     &kp S      &kp T    &kp N     &kp R                                                                                      &kp I    &kp A    &kp E     &kp O    &kp H    &none
+     &lower     &kp Z     &kp X      &kp C    &kp F     &kp J  &mt LCTRL ESC   &mt LGUI DEL        &none          &slash    &apos   &dash          &kp K    &kp P    &comma    &dot     &math    &none
+     &none      &left     &down      &up      &right           &mt LSHFT SPACE &mt RSHFT BACKSPACE &mt LALT RET   &mark     &open   &close                  &none    &none     &none    &none    &none
+            >;
+        };
 
-    layer_Upper {
-    bindings = <
-        &trans &none &none      &none      &none                                                                       &none  &none  &none  &none &none
-        &none  &none &none      &none      &none        &none                                                   &none  &none  &none  &none  &none &none
-        &none  &none &kp C_PREV &kp C_NEXT &kp C_PP     &kp C_VOL_UP                                            &none  &none  &none  &none  &none &none
-        &to 0  &none &none      &none      &kp C_BRI_UP &kp C_VOL_DN                                            &none  &none  &none  &none  &none &none
-        &none  &none &none      &none      &kp C_BRI_DN &kp C_MUTE   &trans &trans &trans  &none  &none &none   &none  &none  &none  &none  &none &none
-        &none  &none &none      &none      &none                     &trans &trans &trans  &none  &none   &none        &none  &none  &none  &none &none
-    >;
-    };
+        layer_Lower {
+            bindings = <
+      &trans &none &none &none &none                                                                &none    &none    &none    &none  &none       
+      &none  &none &none &none &none &none                                                   &none  &none    &none    &none    &none  &none       
+      &none  &kp F7 &kp F8 &kp F9 &none &none                                                &none  &kp N7   &kp N8   &kp N9   &none  &none      
+      &none  &kp F4 &kp F5 &kp F6 &none &none                                                &none  &kp N4   &kp N5   &kp N6   &none  &none      
+      &to 0  &kp F1 &kp F2 &kp F3 &none &none &trans &trans &trans   &none  &none  &none     &none  &kp N1   &kp N2   &kp N3   &none  &none      
+      &none  &none &none &none &none       &trans &trans &trans   &none  &none  &none               &none    &kp N0   &none    &none  &none         
+            >;
+        };
 
-    french_layer {
-    bindings = <
-        &magic 2 0 &kp CAPS  &to 0    &none    &none                                                                                                                          &none    &none           &none       &none             &none
-        &none      &none     &none    &none    &none     &none                                                                                                       &none    &none    &none           &none       &none             &none
-        &kp TAB    &kp FR_Q  &kp FR_G &kp FR_M &kp FR_L  &kp FR_W                                                                                                    &kp FR_B &kp FR_Y &kp FR_U        &kp FR_V    &kp FR_C_CEDILLA  &none
-        &none      &kp FR_D  &kp FR_S &kp FR_T &kp FR_N  &kp FR_R                                                                                                    &kp FR_I &kp FR_A &kp FR_E        &kp FR_O    &kp FR_H          &none
-        &none      &kp FR_Z  &kp FR_X &kp FR_C &kp FR_F  &kp FR_J  &mt LCTRL ESC   &mt LGUI DEL           &none         &none        &kp FR_U_GRAVE  &kp FR_E_GRAVE  &kp FR_K &kp FR_P &comma_fr       &dot_fr     &kp FR_E_ACUTE    &none
-        &none      &left     &down    &up      &right              &mt LSHFT FR_SPACE &mt RSHFT BACKSPACE &mt LALT RET  &kp FR_MINUS &apos_fr        &mark_fr                 &none    &kp FR_A_GRAVE  &none       &none             &none
-    >;
-    };
+        layer_Upper {
+            bindings = <
+      &trans &none &none      &none      &none                                                                       &none  &none  &none  &none &none
+      &none  &none &none      &none      &none        &none                                                   &none  &none  &none  &none  &none &none
+      &none  &none &kp C_PREV &kp C_NEXT &kp C_PP     &kp C_VOL_UP                                            &none  &none  &none  &none  &none &none
+      &to 0  &none &none      &none      &kp C_BRI_UP &kp C_VOL_DN                                            &none  &none  &none  &none  &none &none
+      &none  &none &none      &none      &kp C_BRI_DN &kp C_MUTE   &trans &trans &trans  &none  &none &none   &none  &none  &none  &none  &none &none
+      &none  &none &none      &none      &none                     &trans &trans &trans  &none  &none   &none        &none  &none  &none  &none &none
+            >;
+        };
 
-    layer_Magic {
-    bindings = <
+
+        french_layer {
+            bindings = <
+     &magic 2 0 &kp CAPS  &to 0    &none    &none                                                                                                                          &none    &none           &none       &none             &none
+     &none      &none     &none    &none    &none     &none                                                                                                       &none    &none    &none           &none       &none             &none
+     &kp TAB    &kp FR_Q  &kp FR_G &kp FR_M &kp FR_L  &kp FR_W                                                                                                    &kp FR_B &kp FR_Y &kp FR_U        &kp FR_V    &kp FR_C_CEDILLA  &none
+     &none      &kp FR_D  &kp FR_S &kp FR_T &kp FR_N  &kp FR_R                                                                                                    &kp FR_I &kp FR_A &kp FR_E        &kp FR_O    &kp FR_H          &none
+     &none      &kp FR_Z  &kp FR_X &kp FR_C &kp FR_F  &kp FR_J  &mt LCTRL ESC   &mt LGUI DEL           &none         &none        &kp FR_U_GRAVE  &kp FR_E_GRAVE  &kp FR_K &kp FR_P &comma_fr       &dot_fr     &kp FR_E_ACUTE    &none
+     &none      &left     &down    &up      &right              &mt LSHFT FR_SPACE &mt RSHFT BACKSPACE &mt LALT RET  &kp FR_MINUS &apos_fr        &mark_fr                 &none    &kp FR_A_GRAVE  &none       &none             &none
+            >;
+        };
+
+        layer_Magic {
+            bindings = <
   &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
        &none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
       &trans  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
       &reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none          &reset
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
-    >;
-    };
+            >;
+        };
         
         factory_test_layer {
             bindings = <
