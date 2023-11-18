@@ -6,7 +6,7 @@ lower: lower {
     bindings = <&mo LOWER>, <&to LOWER>;
 };
 
-lower: lower {
+upper: upper {
     compatible = "zmk,behavior-tap-dance";
     label = "LAYER_TAP_DANCE";
     #binding-cells = <0>;
