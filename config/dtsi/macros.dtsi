@@ -41,3 +41,27 @@ bt_3: bt_profile_macro_3 {
         = <&out OUT_BLE>,
           <&bt BT_SEL 3>;
 };
+
+to_french: to_french {
+	label = "to_french";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp CAPS>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &to FRENCH>
+                ;
+}
+
+to_english: to_english {
+	label = "to_english";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp CAPS>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &to DEFAULT>
+                ;
+}
