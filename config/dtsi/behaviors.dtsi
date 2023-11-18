@@ -1,6 +1,6 @@
 lower: lower {
     compatible = "zmk,behavior-tap-dance";
-    label = "LAYER_TAP_DANCE";
+    label = "LAYER_TAP_DANCE_LOWER";
     #binding-cells = <0>;
     tapping-term-ms = <200>;
     bindings = <&mo LOWER>, <&to LOWER>;
@@ -8,7 +8,7 @@ lower: lower {
 
 upper: upper {
     compatible = "zmk,behavior-tap-dance";
-    label = "LAYER_TAP_DANCE";
+    label = "LAYER_TAP_DANCE_UPPER";
     #binding-cells = <0>;
     tapping-term-ms = <200>;
     bindings = <&mo UPPER>, <&to UPPER>;
@@ -55,7 +55,7 @@ close_one: close_one {
     #binding-cells = <0>;
     bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
     mods = <(MOD_LSFT)>;
-};
+};  
 close_two: close_two {
     compatible = "zmk,behavior-mod-morph";
     label = "CLOSE_ONE";
