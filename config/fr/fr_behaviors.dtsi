@@ -28,7 +28,7 @@ fr_apos: fr_apos {
     compatible = "zmk,behavior-mod-morph";
     label = "fr_APOS";
     #binding-cells = <0>;
-    bindings = <&apos_two>, <&kp FR_GRAVE>;
+    bindings = <&fr_apos_two>, <&kp FR_GRAVE>;
     mods = <(MOD_LALT)>;
 };
 
@@ -46,7 +46,7 @@ fr_comma: fr_comma {
 //  .     :          
 fr_dot: fr_dot {
     compatible = "zmk,behavior-mod-morph";
-    label = "fr_dot";
+    label = "FR_DOT";
     #binding-cells = <0>;
     bindings = <&kp FR_DOT>, <&kp FR_COLON>;
     mods = <(MOD_LSFT)>;
@@ -54,7 +54,7 @@ fr_dot: fr_dot {
 
 fr_e_aigu: fr_e_aigu {
     compatible = "zmk,behavior-mod-morph";
-    label = "fr_e_aigu";
+    label = "FR_E_AIGU";
     #binding-cells = <0>;
     bindings = <&kp FR_E_ACUTE>, <&cap_e_aigu>;
     mods = <(MOD_LSFT)>;
@@ -62,7 +62,7 @@ fr_e_aigu: fr_e_aigu {
 
 fr_e_grave: fr_e_grave {
     compatible = "zmk,behavior-mod-morph";
-    label = "fr_e_grave";
+    label = "FR_E_GRAVE";
     #binding-cells = <0>;
     bindings = <&kp FR_E_GRAVE>, <&cap_e_grave>;
     mods = <(MOD_LSFT)>;
@@ -71,7 +71,7 @@ fr_e_grave: fr_e_grave {
 
 fr_a_grave: fr_a_grave {
     compatible = "zmk,behavior-mod-morph";
-    label = "fr_a_grave";
+    label = "FR_A_GRAVE";
     #binding-cells = <0>;
     bindings = <&kp FR_A_GRAVE>, <&cap_a_grave>;
     mods = <(MOD_LSFT)>;
@@ -80,7 +80,7 @@ fr_a_grave: fr_a_grave {
 
 fr_u_grave: fr_u_grave {
     compatible = "zmk,behavior-mod-morph";
-    label = "fr_u_grave";
+    label = "FR_U_GRAVE";
     #binding-cells = <0>;
     bindings = <&kp FR_U_GRAVE>, <&cap_u_grave>;
     mods = <(MOD_LSFT)>;
@@ -89,9 +89,9 @@ fr_u_grave: fr_u_grave {
 
 fr_c_cedille: fr_c_cedille {
     compatible = "zmk,behavior-mod-morph";
-    label = "fr_c_cedille";
+    label = "FR_C_CEDILLE";
     #binding-cells = <0>;
-    bindings = <&kp FR_C_CEDILLE>, <&cap_c_cedille>;
+    bindings = <&kp FR_C_CEDILLA>, <&cap_c_cedille>;
     mods = <(MOD_LSFT)>;
     
 };
