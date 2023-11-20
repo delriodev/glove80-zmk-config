@@ -51,3 +51,47 @@ fr_dot: fr_dot {
     bindings = <&kp FR_DOT>, <&kp FR_COLON>;
     mods = <(MOD_LSFT)>;
 };
+
+fr_e_aigu: fr_e_aigu {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_e_aigu";
+    #binding-cells = <0>;
+    bindings = <&kp FR_E_ACUTE>, <&cap_e_aigu>;
+    mods = <(MOD_LSFT)>;
+};
+
+fr_e_grave: fr_e_grave {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_e_grave";
+    #binding-cells = <0>;
+    bindings = <&kp FR_E_GRAVE>, <&cap_e_grave>;
+    mods = <(MOD_LSFT)>;
+    
+};
+
+fr_a_grave: fr_a_grave {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_a_grave";
+    #binding-cells = <0>;
+    bindings = <&kp FR_A_GRAVE>, <&cap_a_grave>;
+    mods = <(MOD_LSFT)>;
+    
+};
+
+fr_u_grave: fr_u_grave {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_u_grave";
+    #binding-cells = <0>;
+    bindings = <&kp FR_U_GRAVE>, <&cap_u_grave>;
+    mods = <(MOD_LSFT)>;
+    
+};
+
+fr_c_cedille: fr_c_cedille {
+    compatible = "zmk,behavior-mod-morph";
+    label = "fr_c_cedille";
+    #binding-cells = <0>;
+    bindings = <&kp FR_C_CEDILLE>, <&cap_c_cedille>;
+    mods = <(MOD_LSFT)>;
+    
+};

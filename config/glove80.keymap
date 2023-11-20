@@ -78,12 +78,12 @@
 
     french_layer {
     bindings = <
-        &none   &kp CAPS  &to_english &none    &none                                                                                                                          &none    &none           &none       &none             &none
-        &none   &none     &none       &none    &none     &none                                                                                                       &none    &none    &none           &none       &none             &none
-        &kp TAB &kp FR_Q  &kp FR_G    &kp FR_M &kp FR_L  &kp FR_W                                                                                                    &kp FR_B &kp FR_Y &kp FR_U        &kp FR_V    &kp FR_C_CEDILLA  &none
-        &none   &kp FR_D  &kp FR_S    &kp FR_T &kp FR_N  &kp FR_R                                                                                                    &kp FR_I &kp FR_A &kp FR_E        &kp FR_O    &kp FR_H          &none
-        &none   &kp FR_Z  &kp FR_X    &kp FR_C &kp FR_F  &kp FR_J  &mt LCTRL ESC   &mt LGUI DEL           &none         &none        &kp FR_U_GRAVE  &kp FR_E_GRAVE  &kp FR_K &kp FR_P &fr_comma       &fr_dot     &kp FR_E_ACUTE    &none
-        &none   &left     &down       &up      &right              &mt LSHFT FR_SPACE &mt RSHFT BACKSPACE &mt LALT RET  &kp FR_MINUS &fr_apos        &fr_mark                 &none    &kp FR_A_GRAVE  &none       &none             &none
+        &none   &kp CAPS  &to_english &none    &none                                                                                                                   &none    &none        &none    &none          &none
+        &none   &none     &none       &none    &none     &none                                                                                                &none    &none    &none        &none    &none          &none
+        &kp TAB &kp FR_Q  &kp FR_G    &kp FR_M &kp FR_L  &kp FR_W                                                                                             &kp FR_B &kp FR_Y &kp FR_U     &kp FR_V &fr_c_cedille  &none
+        &none   &kp FR_D  &kp FR_S    &kp FR_T &kp FR_N  &kp FR_R                                                                                             &kp FR_I &kp FR_A &kp FR_E     &kp FR_O &kp FR_H       &none
+        &none   &kp FR_Z  &kp FR_X    &kp FR_C &kp FR_F  &kp FR_J  &mt LCTRL ESC   &mt LGUI DEL           &none         &none        &fr_u_grave &fr_e_grave  &kp FR_K &kp FR_P &fr_comma    &fr_dot  &fr_e_aigu     &none
+        &none   &left     &down       &up      &right              &mt LSHFT FR_SPACE &mt RSHFT BACKSPACE &mt LALT RET  &kp FR_MINUS &fr_apos    &fr_mark              &none    &fr_a_grave  &none    &none          &none
     >;
     };
 
