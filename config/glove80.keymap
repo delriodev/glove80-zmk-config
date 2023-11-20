@@ -30,6 +30,7 @@
 
     macros {
         #include "dtsi/macros.dtsi"
+        #include "fr/fr_macros.dtsi"
     };
 
     keymap {
