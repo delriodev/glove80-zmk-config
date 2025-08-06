@@ -47,6 +47,8 @@
             &kp TAB        &kp Q    &kp G    &kp M  &kp L   &kp W                                                                                &kp B &kp Y    &kp U     &kp V  &kp AT   &none
             &mo UPPER      &kp D    &kp S    &kp T  &kp N   &kp R                                                                                &kp I &kp A    &kp E     &kp O  &kp H    &none
             &mo LOWER      &kp Z    &kp X    &kp C  &kp F   &kp J  &mt LCTRL ESC    &mt LGUI DEL   &none          &kp FSLH  &kp SQT  &kp EQUAL   &kp K &kp P    &comma    &dot   &kp STAR &none
+            
+            
             &none          &none    &kp DOWN &kp UP &none          &mt LSHFT SPACE  &mt RSHFT BKSP &mt LALT RET   &kp QMARK &kp LPAR &kp RPAR          &kp LEFT &POUND &none &kp RGHT &kp LC(C)
         >;
     }; 
