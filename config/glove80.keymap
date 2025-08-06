@@ -18,9 +18,8 @@
 #define DEFAULT 0
 #define LOWER 1
 #define UPPER 2
-#define FRENCH 3
-#define MAGIC 4
-#define FACTORY_TEST 5
+#define MAGIC 3
+#define FACTORY_TEST 4
 
 / {
     behaviors {
@@ -37,58 +36,66 @@
         compatible = "zmk,keymap";
 
     default_layer {
-    // ---------------------------------------------------------------------------------------------------------------------------------
-    // | MAGIC | CAPS | FRENCH |      |       |                                                               |       |       |      |       |      |
-    // |       |      |        |      |       |      |                                                 |      |       |       |      |       |      |
-    // |  TAB  |  Q   |    G   |  M   |  L    |  W   |                                                 |  B   |   Y   |   U   |  V   |  at   |      |
-    // | UPPER |  D   |    S   |  T   |  N    |  R   |                                                 |  I   |   A   |   E   |  O   |   H   |      |
-    // | LOWER |  Z   |    X   |  C   |  F    |  J   | ESC   | LCTRL |       | | slash | apos  | dash  |  K   |   P   | comma | dot  |   *   |      |
-    // |       | left |  down  |  up  | right |        SPACE | BKSPC | RET   | | mark  | open  | close        |       | NONE  |      |       |      |
+        // ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // | MAGIC | CAPS |      |    |   |                                                                                                               |      |       |     |       |      |
+        // |       |      |      |    |   |   |                                                                                                       |   |      |       |     |       |      |
+        // |  TAB  |  Q   |   G  | M  | L | W |                                                                                                       | B |   Y  |   U   |  V  |   @   |      |
+        // | UPPER |  D   |   S  | T  | N | R |                                                                                                       | I |   A  |   E   |  O  |   H   |      |
+        // | LOWER |  Z   |   X  | C  | F | J |                                | ESC   | LCTRL |     |                 |  /  |  '  |  =  |            | K |   P  | comma | dot |   *   |      |
+        // |       |      | down | up |   |                                    | SPACE | BKSPC | RET |                 |  ?  |  (  |  )  |                | left |   #   |   > | right | copy |
 
-    bindings = <
-        &magic MAGIC 0  &kp CAPS  &to_french  &none  &none                                                                                             &none  &none   &none  &none  &none
-        &none           &none     &none       &none  &none   &none                                                                              &none  &none  &none   &none  &none  &none
-        &kp TAB         &kp Q     &kp G       &kp M  &kp L   &kp W                                                                              &kp B  &kp Y  &kp U   &kp V  &at    &none
-        &upper          &kp D     &kp S       &kp T  &kp N   &kp R                                                                              &kp I  &kp A  &kp E   &kp O  &kp H  &none
-        &lower          &kp Z     &kp X       &kp C  &kp F   &kp J  &mt LCTRL ESC   &mt LGUI DEL        &none          &slash  &apos   &dash    &kp K  &kp P  &comma  &dot   &math  &none
-        &none           &left     &down       &up    &right         &mt LSHFT SPACE &mt RSHFT BACKSPACE &mt LALT RET   &mark   &open   &close          &none  &none   &none  &none  &none
-    >;
-    };
+        bindings = <
+            &magic MAGIC 0 &kp CAPS &none    &none  &none                                                                                              &none    &none    &none  &none    &none
+            &none          &none    &none    &none  &none   &none                                                                                &none &none    &none    &none  &none    &none
+            &kp TAB        &kp Q    &kp G    &kp M  &kp L   &kp W                                                                                &kp B &kp Y    &kp U    &kp V  &kp AT   &none
+            &mo UPPER      &kp D    &kp S    &kp T  &kp N   &kp R                                                                                &kp I &kp A    &kp E    &kp O  &kp H    &none
+            &mo LOWER      &kp Z    &kp X    &kp C  &kp F   &kp J  &mt LCTRL ESC    &mt LGUI DEL   &none          &kp FSLH  &kp SQT  &kp EQUAL   &kp K &kp P    &comma   &dot   &kp STAR &none
+            &none          &none    &kp DOWN &kp UP &none          &mt LSHFT SPACE  &mt RSHFT BKSP &mt LALT RET   &kp QMARK &kp LPAR &kp RPAR          &kp LEFT &kp HASH &kp GT &kp RGHT &kp LC(C)
+        >;
+    }; 
 
     layer_Lower {
-    bindings = <
-        &trans      &none &none &none &none                                                                &none    &none    &none    &none  &none       
-        &none       &none &none &none &none &none                                                   &none  &none    &none    &none    &none  &none       
-        &none       &kp F7 &kp F8 &kp F9 &none &none                                                &none  &kp N7   &kp N8   &kp N9   &none  &none      
-        &none       &kp F4 &kp F5 &kp F6 &none &none                                                &none  &kp N4   &kp N5   &kp N6   &none  &none      
-        &to DEFAULT &kp F1 &kp F2 &kp F3 &none &none &trans &trans &trans   &none  &none  &none     &none  &kp N1   &kp N2   &kp N3   &none  &none      
-        &none       &none &none &none &none          &trans &trans &trans   &none  &none  &none            &none    &kp N0   &none    &none  &none         
-    >;
+        // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // |  |  |           |         |  |                                                            |             |   |   |              |          |
+        // |  |  |           |         |  |  |                                                     |   |             |   |   |              |          |
+        // |  |  |           |         |  |  |                                                     | $ |      7      | 8 | 9 |              |          |
+        // |  |  |           |         |  |  |                                                     | + |      4      | 5 | 6 |              |          |
+        // |  |  |           |    ç    |  |  |        |  |  |  |        |  \  |  `  |  _  |        | % |      1      | 2 | 3 |              |          |
+        // |  |  | page down | page up |  |           |  |  |  |        |  !  |  {  |  }  |            | ctrl + left | 0 | < | ctrl + right | ctrl + v |
+
+
+
+        bindings = <
+            &trans      &none &none     &none         &none                                                                          &none         &none  &none  &none        &none
+            &none       &none &none     &none         &none &none                                                        &none       &none         &none  &none  &none        &none
+            &none       &none &none     &none         &none &none                                                        &kp Dollar  &kp N7        &kp N8 &kp N9 &none        &none
+            &none       &none &none     &none         &none &none                                                        &kp Plus    &kp N4        &kp N5 &kp N6 &none        &none
+            &to DEFAULT &none &none     &kp RA(COMMA) &none &none   &trans &trans &trans   &kp BSLH &kp GRAVE &kp UNDER  &kp Percent &kp N1        &kp N2 &kp N3 &none        &none
+            &none       &none &kp PG_DN &kp PG_UP     &none         &trans &trans &trans   &kp EXCL &kp LBRC  &kp RBRC               &kp LC(LEFT)  &kp N0 &kp LT &kp LC(RGHT) &kp LC(V)
+        >;
     };    
     
     layer_Upper {
-    bindings = <
-        &trans       &none &none      &none      &none                                                                       &none  &none  &none  &none &none
-        &none        &none &none      &none      &none        &none                                                   &none  &none  &none  &none  &none &none
-        &none        &none &kp C_PREV &kp C_NEXT &kp C_PP     &kp C_VOL_UP                                            &none  &none  &none  &none  &none &none
-        &to DEFAULT  &none &none      &none      &kp C_BRI_UP &kp C_VOL_DN                                            &none  &none  &none  &none  &none &none
-        &none        &none &none      &none      &kp C_BRI_DN &kp C_MUTE   &trans &trans &trans  &none  &none &none   &none  &none  &none  &none  &none &none
-        &none        &none &none      &none      &none                     &trans &trans &trans  &none  &none &none          &none  &none  &none  &none &none
-    >;
-    };
+        // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        //                          |  |  |  |  |  |                                                                                                      |      |     |     |     |          |
+        //                          |  |  |  |  |  |  |                                                                                               |   |  f10 | f11 | f12 |     |          |
+        //                          |  |  |  |  |  |  |                                                                                               |   |  f7  | f8  | f9  |     |          |
+        //                          |  |  |  |  |  |  |                                                                                               | ~ |  f4  | f5  | f6  |     |          |
+        //                          |  |  |  |  |  |  |                                      |  |  |  |        |  |  |  "  |  -  |                    | ¨ |  f1  | f2  | f3  |     |          |
+        //                          |  |  |  |  |  |                                         |  |  |  |        |  &  |  [  |  ]  |                        | home |     |  ^  | end | ctrl + x |
 
-    french_layer {
-    bindings = <
-        &none   &kp CAPS  &to_english &none    &none                                                                                                                   &none    &none        &none    &none          &none
-        &none   &none     &none       &none    &none     &none                                                                                                &none    &none    &none        &none    &none          &none
-        &kp TAB &kp FR_Q  &kp FR_G    &kp FR_M &kp FR_L  &kp FR_W                                                                                             &kp FR_B &kp FR_Y &kp FR_U     &kp FR_V &fr_c_cedille  &none
-        &none   &kp FR_D  &kp FR_S    &kp FR_T &kp FR_N  &kp FR_R                                                                                             &kp FR_I &kp FR_A &kp FR_E     &kp FR_O &kp FR_H       &none
-        &none   &kp FR_Z  &kp FR_X    &kp FR_C &kp FR_F  &kp FR_J  &mt LCTRL ESC   &mt LGUI DEL           &none         &none        &fr_u_grave &fr_e_grave  &kp FR_K &kp FR_P &fr_comma    &fr_dot  &fr_e_aigu     &none
-        &none   &left     &down       &up      &right              &mt LSHFT FR_SPACE &mt RSHFT BACKSPACE &mt LALT RET  &kp FR_MINUS &fr_apos    &fr_mark              &none    &fr_a_grave  &none    &none          &none
-    >;
+        bindings = <
+            &trans      &none      &none      &none      &none                                                                                         &none      &none      &none      &none      &none
+            &none       &none      &none      &none      &none        &none                                                                  &none     &kp F10    &kp F11    &kp F12    &none      &none
+            &none       &none      &kp C_PREV &kp C_NEXT &kp C_PP     &kp C_VOL_UP                                                           &none     &kp F7     &kp F8     &kp F9     &none      &none
+            &to DEFAULT &none      &none      &none      &kp C_BRI_UP &kp C_VOL_DN                                                           &kp TILDE &kp F4     &kp F5     &kp F6     &none      &none
+            &none       &none      &none      &none      &kp C_BRI_DN &kp C_MUTE        &trans &trans &trans  &kp PIPE  &kp DQT  &kp MINUS   &none     &kp F1     &kp F2     &kp F3     &none      &none
+            &none       &none      &none      &none      &none                          &trans &trans &trans  &kp AMPS  &kp LBKT &kp RBKT              &kp HOME   &none      &kp Caret  &kp END    &kp LC(X)
+        >;
     };
 
     magic_layer {
+    // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
         bindings = <
         &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
         &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
