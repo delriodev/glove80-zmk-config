@@ -76,12 +76,12 @@
         //                       |     |     |     |     |     |                             |  |  |  |        |  &  |  [  |  ]  |                        | home | page down | page up | end | ctrl + x |
 
         bindings = <
-            &trans      &none      &none      &none      &none                                                                                             &none         &none       &none      &none        &none
-            &none       &none      &none      &none      &none      &none                                                                       &none      &none         &none       &none      &none        &none
-            &none       &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                                                      &kp LS(N3) &kp RA(RBKT)  &none       &none      &none        &none
-            &to DEFAULT &kp F6     &kp F7     &kp F8     &kp F9     &kp F10                                                                     &kp LS(N8) &kp RA(COMMA) &kp RA(DOT) &kp LBKT   &kp LS(LBKT) &none
-            &none       &kp F11    &kp F12    &kp F13    &kp F14    &kp F15      &trans &trans &trans  &kp TILDE  &kp RA(FLSH) &kp MINUS        &kp LS(N2) &kp RA(Z)     &kp RA(X)   &none      &none        &none
-            &none       &none      &none      &none      &none                   &trans &trans &trans  &kp LS(N7) &kp RA(N9)   &kp RA(N0)                  &kp HOME      &kp PG_DN   &kp PG_UP  &kp END      &none
+            &trans      &none      &none      &none      &none                                                                                                   &none         &none       &none      &none        &none
+            &none       &none      &none      &none      &none      &none                                                                             &none      &none         &none       &none      &none        &none
+            &none       &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                                                            &kp LS(N3) &kp RA(RBKT)  &none       &none      &none        &none
+            &to DEFAULT &kp F6     &kp F7     &kp F8     &kp F9     &kp F10                                                                           &kp LS(N8) &kp RA(COMMA) &kp RA(DOT) &kp LBKT   &kp LS(LBKT) &none
+            &none       &kp F11    &kp F12    &kp F13    &kp F14    &kp F15      &trans &trans &trans       &kp TILDE  &kp RA(SLASH) &kp MINUS        &kp LS(N2) &kp RA(Z)     &kp RA(X)   &none      &none        &none
+            &none       &none      &none      &none      &none                   &trans &trans &trans       &kp LS(N7) &kp RA(N9)    &kp RA(N0)                  &kp HOME      &kp PG_DN   &kp PG_UP  &kp END      &none
         >;
     };
 
